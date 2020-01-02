@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/reset.css">
+  <!-- //<link rel="stylesheet" href="styles/base.css"> -->
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/results.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <title>Results</title>
+</head>
+<body>
+
+  <header>
+    <%- include('../partials/nav.ejs') %>
+    <h2>Results</h2>
+  </header>
+  <main>
+    <h1><%= render.location %></h1>
+    <div id="map-and-air-container">
+      <div id="map-container">
+        <!-- API key need to be removed -->
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=seattle&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCISg1U61yr8wgD6vDSb9iOGydUd48KZvI" alt="google map">
+      </div>
+      <div id="air-quality-container">
+        <h2 class="title">Air Quality Results</h2>
+        <p><%= render.aqi %></p>
+        <p><%= render.aqiCategory %></p>
+      </div>
+    </div>
+    <div id="yelp-container">
+      <h2 class="title">Restaurant Results</h2>
+      <div id="yelp-content">
+        <% render.yelpData.forEach(review => { %>
+        <div class="card">
+          <img src="<%= review.image_url %>" alt="yelp image" height="100" width="100">
+          <div class="container">
+            <h3 class="sub-title"><%= review.name %></h3> 
+            <p>Rating: <%= review.rating %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <div id="crime-container">
+      <h2 class="title">Crime results (show first 5)</h2>
+      <div id="crime-content">
+        <% for (let i = 0; i < 5; i++) { %>
+          <div class="card">
+            <h3 class="sub-title">Neighborhood:</h3>
+            <p><%= render.crimeData[i].neighborhood %></p>
+            <div class="container">
+              <h3 class="sub-title">Crime:</h3>
+              <p><%= render.crimeData[i].crime_description %></p>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <footer>
+  <%- include('../partials/footer.ejs') %>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>ㅇ

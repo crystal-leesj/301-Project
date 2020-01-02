@@ -1,0 +1,10 @@
+input {
+  background-color: white;
+}
+.upsideDown {
+  transform: rotate(180deg);
+}
+h1 {
+  font-size: 50px;
+  padding-bottom: 1%;
+}

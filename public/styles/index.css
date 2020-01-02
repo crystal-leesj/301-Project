@@ -1,0 +1,84 @@
+
+
+
+body {
+  /* position: relative; */
+  font-family: 'Shadows Into Light', cursive;
+  background-image: url(pictures/jokerdriving.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-positon: center center;
+  height: 100%;
+  width: 100%;
+  font-color: red;
+  color: red;
+  margin: 15% 0% 0% 0%;
+  padding: 0%;
+  background-color: black;
+  }
+  
+label {
+  position: relative;
+  font-size: 2em;
+  maring: 0% 0% 0% 0%;
+  padding: 0%;
+}
+
+input {
+  position: relative;
+  font-size: .5em;
+  width: 20%;
+  height: 20%;
+}
+
+#headline {
+  position: relative;
+  font-size: 5em;
+  margin: 0 0 0 0;
+  padding: 0;
+  bottom: 50px;
+}
+
+input[type=submit] {
+  position: relative;
+  width: 15%;
+  height: 15%;
+  font-size: 2em;
+}
+
+  
+  #mainPage {
+      positon: relative;
+      margin: 10% 0% 0% 0%;
+      padding: 5%;
+      border: 0%;
+      background-color: black;
+  
+  }
+    
+  #nav {
+      position: relative;
+      margin: 0% 0% 0% 0% ;
+      padding: 0%;
+      font-size: 5em;
+     
+      
+  }
+    
+  header {
+      position: relative;
+      font-size: 1em;
+      background-color: red;
+      margin: 0% 0% 0% 0%;
+      padding: 0%;
+      bottom: 290px;
+  }
+  
+  footer {
+    position: relative;
+    background: black;
+    height: 9%;
+    font-size: 3em;
+    padding: 0%;
+    margin: 0 0 0 0 ;
+  }

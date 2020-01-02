@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <title>The Upside Down</title>
+</head>
+<body>
+  <header>
+
+    <%- include('../partials/nav.ejs') %>
+  </header>
+  <main>
+    <div id="mainPage">
+    <h1 id="headline" class="upsideDown">The Upside Down</h1>
+    <div id="homeForm">
+      <form method="GET" action="/location">
+        <label> Your Name:
+          <input name="name" type="text" placeholder="Name">
+        </label>
+        <label>Location:
+          <input name="location" type="text" placeholder="location">
+        </label>
+        <input type="submit" value="Find Out">
+      
+      </form>
+    </div>
+  </div>
+</main>
+<footer>
+  <%- include('../partials/footer.ejs') %>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html> 

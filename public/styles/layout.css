@@ -1,0 +1,21 @@
+footer {
+  position: fixed;
+  width: 100%;
+  border: 1px solid red;
+  bottom: 0;
+}
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+#nav {
+  display: flex;
+  justify-content: center;
+}
+#mainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
